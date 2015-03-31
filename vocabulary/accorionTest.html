@@ -1,0 +1,20 @@
+<html>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<body>
+	<h3 class="accordion_head" style="cursor:pointer;color: red;border: 1px solid;width: 350px;">▼警告があります。クリックして表示</h3>
+	<div id="contents">
+		<p>中身</p>
+		<p>中身</p>
+		<p>中身</p>
+		<p hidden="false" >中身</p>
+	</div>
+	<h3 class="accordion_head" style="">bottomElement</h3>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.accordion_head').click(function(){
+		$("#contents").slideToggle(	);
+	}).next().hide();
+});
+</script>
+</html>

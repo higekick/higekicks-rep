@@ -1,0 +1,115 @@
+html{
+    text-align: center;
+}
+
+div#message{
+	text-align: center;
+	width: 40%;
+	border: solid 2px green;
+}
+
+body{
+color: #330099;
+font-size: 80.5%;
+width: 80%;
+margin: 0 auto;
+position: relative;
+text-align: left;
+}
+
+H1 {
+	padding: 5px;
+}
+.subtitle{
+	float: right;
+	font-size: 60%;
+	text-align: bottom;
+	padding-top: 18px; 
+}
+
+.title{
+	color: #222222;
+	margin-bottom: 0;
+	text-shadow: 0 1px 1px #fff;
+	font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif !important;
+}
+
+button#register-vocabulary{
+	float: left;
+	margin-bottom: 5px;
+}
+
+button#showDetail-vocabulary{
+    float: left;
+}
+
+button#serchVoca{
+	width: 25px;
+	height: 25px;
+
+}
+
+#table-listing-area {
+/*	border: solid 1px #0000CC;
+	padding: 20px;
+*/
+	margin-top: 10px;
+	float: left;
+}
+
+
+table#vocabulary tr.even.row_selected td {
+	background-color: #B0BED9;
+}
+
+table#vocabulary tr.odd.row_selected td {
+	background-color: #9FAFD1;
+}
+
+table#vocabulary td.voc-name{
+    font-weight: bold;
+    font-size: large;
+}
+
+table#vocabulary tr{
+    cursor:pointer;
+}
+
+/* çÏêªì˙ïtÇÃóÒïùÇéwíË */
+table#vocabulary th:nth-child(5){
+	width: 100px;
+}
+
+.ui-loading {
+	url(./images/loading.gif) no-repeat;
+}
+
+#datepicker{
+	float: right;
+}
+/*
+table#vocabulary, td{
+	border: solid 1px #0066CC;
+}
+
+table#vocabulary {
+	width: 100%;
+       border-collapse: collapse;
+}
+
+table#vocabulary th {
+	//background-image: url('redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png');
+	background-repeat:repeat-x;
+	background-color: #0000CC;
+	color: white;
+	padding: 0;
+	font-size: 120%;
+}
+table#vocabulary td {
+	padding: 3px;
+}
+table#vocabulary tr:nth-child(odd){
+	background-color: #eeeeee;
+}
+*/	
+

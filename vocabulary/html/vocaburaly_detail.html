@@ -1,0 +1,97 @@
+<script type="text/javascript" src="js/detailHandler.js"></script>
+<script type="text/javascript" src="js/linkObjects.js"></script>
+<script type="text/javascript" src="js/linkHandler.js"></script>
+<script type="text/javascript" src="js/UtilContainer.js"></script>
+
+<!-- linkObjects.js linkhandler.jsはvocabularyBuilder.jsからも使うため
+vocabularyBuilder.phpにも記載している。こうすると変数を共有できるみたいです。  -->
+<link rel="stylesheet" href="css/detail.css" type="text/css">
+<div id="frame-div">
+	<div class="ui-widget-content" id="voc-headder">
+		<div id="loading-div">
+		</div>
+		<div id="voc-name-div">
+			<label id="voc-name-label" for="voc_name">Word</label>
+			<div id='name-text-label' class="word-item">
+			</div>
+			<input id='name-text' class="word-item text ui-widget-content ui-corner-all" typ"text"    name="voc_name" size="30" colname="word">
+			</input>
+		</div>
+	</div>
+	<div id="columns-container">
+		<div id='left-column'>
+			<label for="part-of-speech">Part of speech</label>
+				<select id="pos-select" name="part-of-speech" class="word-item text ui-widget-content ui-corner-all" colname="partofspeech">
+				<option value="noun">noun</option>
+				<option value="verb">verb</option>
+				<option value="adj">adjective</option>
+				<option value="adv">adverb</option>
+				<option value="phrase">phrase</option>
+				<option value="expression">expression</option>
+			</select>
+			</p>
+			<div id="meaning-group">
+				<label style="vertical-align: top" for="voc_meaning">Meaning</label>
+				<textarea cols="30" rows="5" id='meaning-text' class="word-item text ui-dget-content ui-corner-all" name="voc_meaning" colname="meaning"></textarea>
+			</div>
+			<p/>
+			<div id="example-group">
+				<label style="vertical-align: top" for="example_sentence">Example</label>
+				<textarea cols="30" rows="5" id='example-text' class="word-item text ui-dget-content ui-corner-all" type="text" name="example_sentence" colname="example"></textarea>
+			</div>
+			<p/>
+			<div id="source-group">
+				<label for="source">Source</label>
+				<input id='source-text' class="word-item text ui-widget-content ui-corneall" type="text" name="source" size="35" colname="source">
+				</input>
+			</div>
+		</div>
+		<!--left-column-->
+		<div id='right-column'>
+			<!--<label>Word family</label>
+			-->
+			<div id="word-family-div" class="ui-widget-content">
+				<div id="word-family-header" class="ui-widget-header">Word Family</div>
+				<button class="rich-buttons" id="add-link-button">add</button>
+				<button class="rich-buttons" id="delete-link-button" >delete</button>
+				<button class="rich-buttons" id="open-allpane" ><span>open all pane</span></button>
+				<div class="wordlink-accordion" id="create-newlink-accordion">
+				  <h3>
+						<a href="#">create new link</a>
+					</h3>
+					<div class="accordion-container" id="create-newlink-container">
+					</div>
+				</div>
+				<div class="wordlink-accordion" id="partofspeech-accordion">
+					<h3>
+						<a href="#">Other part of speech</a>
+					</h3>
+					<div class="accordion-container" id="partofspeech-container">
+						<ul class="ui-helper-reset">
+							<!--<li class="ui-state-default">Lolcat Shirt</li>
+							-->
+						</ul>
+					</div>
+				</div>
+				<div class="wordlink-accordion" id="synonym-accordion">
+					<h3>
+						<a href="#">Synonym</a>
+					</h3>
+					<div class="accordion-container" id="synonym-container">
+						<ul class="ui-helper-reset">
+						</ul>
+					</div>
+				</div>
+				<div class="wordlink-accordion" id="antonym-accordion">
+					<h3>
+						<a href="#">Antonym</a>
+					</h3>
+					<div class="accordion-container" id="antonym-container">
+						<ul class="ui-helper-reset"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--right-column -->
+	</div>
+</div>

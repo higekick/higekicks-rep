@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<frame>
+	<label for="voc_name">Word</label>
+	<input class="text ui-widget-content ui-corner-all" type="text" name="voc_name" size="40">dd </input>
+	<p/>
+	<label for="voc_meaning">Meaning</label>
+	<input class="text ui-widget-content ui-corner-all" type="text" name="voc_meaning" size="40">ff </input>
+	<p/>
+	<label for="example_sentence">Example</label>
+	<input class="text ui-widget-content ui-corner-all" type="text" name="example_sentence" size="40"> </input>
+	<label for="source">Source</label>
+	<input class="text ui-widget-content ui-corner-all" type="text" name="source" size="40"> </input>
+</frame>
