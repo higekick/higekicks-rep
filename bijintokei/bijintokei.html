@@ -1,0 +1,63 @@
+<div id="bijin-watch-div">
+<div class="bijin_blog_part" data-width="290" data-bcid="okayama" ></div>
+</div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+setTimeout('bijinLoad()',3000);
+setLoadAction();
+
+ jQuery("select#bijin-select").change(function() {
+              var str = "";
+              // これだとだめなの？↓
+              //str = jQuery("select#bijin-select").val();
+              str = jQuery("select#bijin-select option:selected").val();
+              jQuery(".bijin-content").attr("data-bcid", str);
+              jQuery(".bijin_blog_part").attr("data-bcid", str);
+              bijinLoad();
+	 });
+
+function setLoadAction(){
+jQuery( "#bijin-load-button" ).onclick = bijinLoadFunc();
+}
+
+});
+
+var bijinLoadFunc 
+= function() {
+var str = jQuery("select#bijin-select option:selected").val();
+bijinLoad();
+}
+
+function bijinLoad() {
+                var d = document;
+                var s = "script";
+                var id =  "bijint-widget";
+		var js, fjs = d.getElementsByTagName(s)[0];
+	        if (d.getElementById(id)) {
+                // 二回目読み込み以降は最初に作ったものを消す
+                    jQuery("#bijint-widget").remove();
+                    jQuery("head link[href*=bijint]").remove();
+                    jQuery("head script[src*=bijint]").remove();
+                };
+		js = d.createElement(s);
+		js.id = id;
+		js.async = true;
+		js.src = "http://blogparts.bijint.com/blogparts/js/script.js";
+                 //本来insertbeforeだが、fjsがnullになる場合はエラーになるから
+		// fjs.parentNode.insertBefore(js, fjs);
+                jQuery("head").append(js);
+};
+</script>
+
+<div id ="bijin-select-lable">SELECT YOUR BIJIN</div>
+
+<select id="bijin-select" style="color: black;" name="prefecture">
+<option value="okayama" selected>岡山</option>
+<option value="hiroshima">広島</option>
+<option value="osaka">大阪</option>
+<option value="tokyo">東京</option>
+</select>
+<!--
+<input id="bijin-load-button" style="color: black;" value="load" type="button" onClick="bijinLoadFunc()" ></input> -->
